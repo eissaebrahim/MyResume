@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>السيرة الذاتية - إبراهيم عبده محمد عيسى</title>
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Animate.css للحركات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #e3f2fd;
+      --accent-color: #0056b3;
+      --dark-color: #003366;
+      --light-color: #f8f9fa;
+      --font-size-lg: 1.2rem;
+      --font-size-xl: 1.4rem;
+      --font-size-xxl: 1.6rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-image: url('Special/s.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+      font-size: var(--font-size-lg);
+      line-height: 1.8;
+    }
+
+    .cv-container {
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 1100px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .cv-container:hover {
+      transform: translateY(-5px);
+    }
+
+    /* تأثير الإطار المتقطع */
+    .cv-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px dashed var(--accent-color);
+      border-radius: 15px;
+      pointer-events: none;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    .right-section {
+      width: 35%;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+      color: #fff;
+      padding: 35px 25px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* تأثير الخلفية */
+    .right-section::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      z-index: 0;
+    }
+
+    .right-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid rgba(255,255,255,0.3);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%);
+      transition: filter 0.4s ease;
+    }
+
+    .profile-pic:hover img {
+      filter: grayscale(0%);
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-top: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: 1px;
+    }
+
+    .job-title {
+      background: var(--secondary-color);
+      color: var(--dark-color);
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin: 20px 0;
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .job-title:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .description {
+      font-size: var(--font-size-lg);
+      line-height: 1.9;
+      text-align: justify;
+      margin: 25px 0;
+      padding: 0 15px;
+      position: relative;
+    }
+
+    .description::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent-color);
+      margin: 20px auto 0;
+      border-radius: 3px;
+    }
+
+    .section-title {
+      background-color: var(--accent-color);
+      padding: 12px 18px;
+      margin: 30px 0 20px;
+      font-size: var(--font-size-xl);
+      border-radius: 8px;
+      text-align: right;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .section-title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 100%;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .contact-info, .languages, .hobbies {
+      text-align: right;
+      font-size: var(--font-size-lg);
+      line-height: 1.9;
+      padding: 0 15px;
+    }
+
+    .contact-info p, .languages p, .hobbies p {
+      margin: 15px 0;
+      position: relative;
+      padding-right: 35px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-info p:hover, .languages p:hover, .hobbies p:hover {
+      transform: translateX(-5px);
+    }
+
+    .contact-info i, .languages i, .hobbies i {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+    }
+
+    .left-section {
+      width: 65%;
+      padding: 35px 30px;
+      position: relative;
+    }
+
+    /* تأثير النقاط في الخلفية */
+    .left-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(rgba(0, 123, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .left-section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .item {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
+      background: rgba(255,255,255,0.8);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border-right: 5px solid var(--accent-color);
+    }
+
+    .item:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+
+    .item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .item p {
+      margin: 12px 0;
+      line-height: 1.9;
+      font-size: var(--font-size-lg);
+    }
+
+    .item strong {
+      color: var(--primary-color);
+      font-size: var(--font-size-xl);
+    }
+
+    .item ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    .item li {
+      padding: 10px 0;
+      padding-right: 30px;
+      position: relative;
+      font-size: var(--font-size-lg);
+    }
+
+    .item li::before {
+      content: "\f054";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      right: 0;
+      top: 12px;
+      color: var(--accent-color);
+      font-size: 16px;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills li {
+      background: var(--light-color);
+      color: var(--dark-color);
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 1px solid var(--secondary-color);
+    }
+
+    .skills li:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .skills li::before {
+      display: none;
+    }
+
+    .progress-container {
+      width: 100%;
+      background-color: #f1f1f1;
+      border-radius: 12px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 12px;
+      transition: width 1.5s ease-in-out;
+    }
+
+    .buttons {
+      text-align: center;
+      margin: 50px auto 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+      color: #fff;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .buttons button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .buttons button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .buttons button:hover::before {
+      left: 100%;
+    }
+
+    .buttons button i {
+      font-size: 1.5rem;
+    }
+
+    /* تأثيرات للروابط */
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease;
+      font-size: var(--font-size-lg);
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    /* تأثيرات للتواريخ */
+    .date-badge {
+      background: var(--light-color);
+      color: var(--dark-color);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      display: inline-block;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .date-badge:hover {
+      background: var(--secondary-color);
+      transform: scale(1.1);
+    }
+
+    /* تأثيرات للعناوين الفرعية */
+    .sub-title {
+      font-weight: 800;
+      color: var(--primary-color);
+      margin: 20px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: var(--font-size-xl);
+    }
+
+    .sub-title i {
+      color: var(--accent-color);
+      font-size: 1.5rem;
+    }
+
+    /* تأثيرات للبطاقات */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      border-left: 4px solid var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    /* تأثيرات للقوائم */
+    .fancy-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .fancy-list li {
+      padding: 12px 0;
+      border-bottom: 1px dashed #eee;
+      display: flex;
+      align-items: center;
+      font-size: var(--font-size-lg);
+    }
+
+    .fancy-list li:last-child {
+      border-bottom: none;
+    }
+
+    .fancy-list i {
+      margin-left: 15px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+
+    /* تأثيرات للشريط الجانبي */
+    .sidebar-effect {
+      position: relative;
+    }
+
+    .sidebar-effect::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 0;
+      background: var(--secondary-color);
+      transition: height 0.6s ease;
+    }
+
+    .sidebar-effect:hover::after {
+      height: 100%;
+    }
+
+    /* رسالة التحميل */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      color: white;
+      font-size: var(--font-size-xxl);
+      flex-direction: column;
+    }
+    
+    .loading-spinner {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    /* تأثيرات للطباعة */
+    @media print {
+      body {
+        font-size: 16pt !important;
+        line-height: 1.6 !important;
+      }
+      
+      .buttons {
+        display: none !important;
+      }
+      
+      body {
+        background: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      .cv-container {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        flex-direction: row-reverse !important;
+      }
+      
+      .item {
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 20pt !important;
+      }
+      
+      .right-section {
+        page-break-after: always;
+        width: 35% !important;
+      }
+      
+      .left-section {
+        width: 65% !important;
+      }
+      
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+      
+      @page {
+        size: auto;
+        margin: 15mm;
+      }
+    }
+
+    /* تأثيرات للجوال */
+    @media (max-width: 992px) {
+      body {
+        font-size: 1.1rem;
+      }
+      
+      .cv-container {
+        flex-direction: column;
+      }
+      
+      .right-section, .left-section {
+        width: 100%;
+      }
+      
+      .right-section {
+        padding: 30px 20px;
+      }
+      
+      .left-section {
+        padding: 30px 25px;
+      }
+      
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .buttons button {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .name {
+        font-size: 1.8rem;
+      }
+      
+      .job-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- رسالة التحميل -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <i class="fas fa-spinner loading-spinner"></i>
+    <p id="loadingMessage">جاري التحميل...</p>
+  </div>
+
+  <div class="cv-container" id="cv">
+    <!-- Right section (البيانات الشخصية) -->
+    <div class="right-section">
+      <div class="profile-pic animate__animated animate__fadeIn">
+        <img src="Special/name.jpg" alt="صورة شخصية">
+      </div>
+      <h1 class="name animate__animated animate__fadeInDown">إبراهيم عبده محمد عيسى</h1>
+      <div class="job-title animate__animated animate__fadeInUp">مطور برمجيات</div>
+      <p class="description animate__animated animate__fadeIn">
+        خريج بكالوريوس تكنولوجيا المعلومات من جامعة ذمار بتقدير امتياز 94.5%. 
+        متخصص في تطوير البرمجيات ولدي خبرة في البرمجة وتحليل البيانات وحل المشكلات التقنية.
+        حاصل على المركز الثاني في مسابقة الأمن السيبراني بجامعة ذمار ومشارك في مؤتمرات الذكاء الاصطناعي.
+      </p>
+
+      <div class="section-title animate__animated animate__fadeInRight">
+        <i class="fas fa-address-card"></i> معلومات الاتصال
+      </div>
+      <div class="contact-info sidebar-effect">
+        <p><i class="fas fa-phone"></i> +967771223151</p>
+        <p><i class="fas fa-envelope"></i> eissa77122@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> ذمار، اليمن</p>
+        <p><i class="fab fa-github"></i> GitHub: github.com/eissaebrahim</p>
+      </div>
+
+      <div class="section-title animate__animated animate__fadeInRight">
+        <i class="fas fa-language"></i> اللغات
+      </div>
+      <div class="languages sidebar-effect">
+        <p><i class="fas fa-circle"></i> اللغة العربية: 
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 100%"></div>
+          </div>
+        </p>
+        <p><i class="fas fa-circle"></i> اللغة الإنجليزية: 
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+        </p>
+      </div>
+
+      <div class="section-title animate__animated animate__fadeInRight">
+        <i class="fas fa-heart"></i> الهوايات
+      </div>
+      <div class="hobbies sidebar-effect">
+        <p><i class="fas fa-book-open"></i> القراءة التقنية</p>
+        <p><i class="fas fa-code"></i> حل المشكلات البرمجية</p>
+            <p><i class="fas fa-code"></i> انترنت الأشياءوالرقمنة</p>
+      </div>
+    </div>
+
+    <!-- Left section (المحتوى) -->
+    <div class="left-section">
+      <div class="item">
+        <div class="section-title">
+          <i class="fas fa-graduation-cap"></i> المؤهلات العلمية
+        </div>
+        <div class="card">
+          <p>
+            <span class="date-badge">2015 - 2019</span>
+            <strong>جامعة ذمار</strong>
+          </p>
+          <p>بكالوريوس في تكنولوجيا المعلومات - تقدير امتياز (93.5%)</p>
+          <ul class="fancy-list">
+            <li><i class="fas fa-medal"></i>حاصل على مرتبة الشرف </li>
+            <li><i class="fas fa-trophy"></i> أفضل مشروع تخرج</li>
+            <li><i class="fas fa-users"></i> مشارك نشط وفعال في جميع الأنشطة والفعاليات الجامعية</li>
+            <li><i class="fas fa-star"></i> مستوى دراسي عالي وعنصر نشط</li>
+            <li><i class="fas fa-hands-helping"></i> متساعد ومتعاون مع جميع ابناء كليته</li>
+             <li><i class="fas fa-hands-helping"></i> مدرب المعلمين على استخدام الذكاء الاصطناعي واع</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section-title">
+          <i class="fas fa-briefcase"></i> الخبرات العملية
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-laptop-code"></i> مطور ويب</h3>
+          <p>
+            <span class="date-badge">يناير 2020 - الآن</span>
+          </p>
+          <ul>
+            <li>بناء وتصيم أنظمة برمجية من الصفر</li>
+            <li>بناء وتصميم تطبيقات اندرويد حسب رغبتك</li>
+            <li><i class="fas fa-network-wired"></i> برمجة وإدارة الشبكات</li>
+            <li><i class="fas fa-tasks"></i> إدارة المشاريع</li>
+            <li>تطوير وتصميم واجهات مستخدم تفاعلية</li>
+            <li>حل المشكلات البرمجية</li>
+            <li>خبرة في تحليل واكتشاف البيانات</li>
+            <li>إدارة قواعد البيانات</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-user-graduate"></i> متدرب</h3>
+          <p>
+            <span class="date-badge">مايو 2018 - ديسمبر 2019</span>
+          </p>
+          <ul>
+            <li>بناء مشاريع ضخمة في جميع المراحل الجامعية والمستويات</li>
+            <li>تطوير تطبيقات ويب باستخدام HTML, CSS, JavaScript</li>
+            <li>المشاركة في مشاريع برمجية</li>
+            <li>تعلم أساسيات إدارة المشاريع</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section-title">
+          <i class="fas fa-code"></i> المهارات واللغات البرمجية 
+        </div>
+        <div class="skills">
+          <ul>
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-php"></i> PHP</li>
+            <li><i class="fas fa-code"></i> C#</li>
+            <li><i class="fas fa-mobile-alt"></i> Flutter</li>
+            <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+            <li><i class="fas fa-database"></i> SQL Server</li>
+            <li><i class="fas fa-cogs"></i> C++</li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section-title">
+          <i class="fas fa-project-diagram"></i> المشاريع
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-user-graduate"></i> نظام ويب لبيانات طلاب الجامعة</h3>
+          <p>نظام متكامل لإدارة بيانات الطلاب الجامعيين</p>
+          <p><i class="fas fa-link"></i> رابط المشروع: <a href="https://eissait.infinityfreeapp.com/EissaSite/Resume.html">eissait.infinityfreeapp.com</a></p>
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-pills"></i> تطبيق اندرويد "دوائي"</h3>
+          <p>تطبيق لإدارة الأدوية والمواعيد الطبية</p>
+          <p>أوصي بتجربة هذا التطبيق الرائع! <a href="#">[رابط التطبيق]</a></p>
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-microchip"></i> تطبيق التحكم بدرجات الحرارة والإضاءة لبيئة معينة</h3>
+          <p>مشروع إنترنت الأشياء للتحكم بالبيئة المحيطة</p>
+          <p><i class="fas fa-link"></i> رابط المشروع: <a href="https://eissait.infinityfreeapp.com/IOT/esp23.php">eissait.infinityfreeapp.com</a></p>
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-utensils"></i> نظام مطعم بلغة سي شارب</h3>
+          <p>نظام متكامل لإدارة المطاعم</p>
+          <p><i class="fas fa-link"></i> رابط المشروع: <a href="mailto:eissa77122@gmail.com">eissa77122@gmail.com</a></p>
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-users"></i> نظام الطلاب بلغة السي بلاس بلاس</h3>
+          <p>نظام لإدارة بيانات الطلاب</p>
+          <p><i class="fas fa-link"></i> رابط المشروع: <a href="mailto:eissa77122@gmail.com">eissa77122@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section-title">
+          <i class="fas fa-trophy"></i> الإنجازات
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-medal"></i> من أوائل الدفعة في جميع المستويات الدراسية ومتفوقاً</h3>
+          <img src="Special/My.jpg" alt="صورة الإنجاز" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+        </div>
+        <div class="card">
+          <h3 class="sub-title"><i class="fas fa-shield-alt"></i> المركز الثاني في مسابقة الأمن السيبراني</h3>
+          <p>جامعة ذمار - 2018</p>
+          <img src="Special/SH.jpg"alt="صورة الشهادة" style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button onclick="printCV()">
+      <i class="fas fa-print"></i> طباعة السيرة الذاتية
+    </button>
+    <button onclick="downloadPDF()">
+      <i class="fas fa-file-pdf"></i> تحميل PDF
+    </button>
+    <button onclick="shareCV()">
+      <i class="fas fa-share-alt"></i> مشاركة
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // ========== دالة الطباعة المعدلة ==========
+    function printCV() {
+      // إظهار رسالة التحميل
+      showLoading('جاري تحضير المستند للطباعة...');
+      
+      // حفظ المحتوى الأصلي للصفحة
+      const originalContent = document.body.innerHTML;
+      const originalTitle = document.title;
+      
+      // الحصول على محتوى السيرة الذاتية مع أنماط الطباعة
+      const cvContent = document.getElementById('cv').outerHTML;
+      
+      // استبدال محتوى الصفحة بمحتوى الطباعة
+      document.body.innerHTML = `
+        <div id="print-content" style="padding:20px">
+          ${cvContent}
+          <style>
+            @media print {
+              body { 
+                font-size: 16pt !important;
+                line-height: 1.6 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              .buttons, .buttons * { display: none !important; }
+              .item { opacity: 1 !important; transform: none !important; page-break-inside: avoid; }
+              .right-section { page-break-after: always; }
+              a { text-decoration: none !important; color: inherit !important; }
+              @page { size: auto; margin: 15mm; }
+            }
+            @media screen {
+              body { background: white !important; padding: 20px; }
+              button { display: none !important; }
+            }
+          </style>
+          <button onclick="window.print()" style="position:fixed;top:20px;right:20px;padding:12px 24px;
+            background:#007bff;color:white;border:none;border-radius:6px;cursor:pointer;font-size:18px;
+            z-index:1000;box-shadow:0 4px 8px rgba(0,0,0,0.3);">
+            <i class="fas fa-print"></i> طباعة الآن
+          </button>
+        </div>
+      `;
+      
+      // إضافة Font Awesome للطباعة
+      const fa = document.createElement('link');
+      fa.rel = 'stylesheet';
+      fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+      document.head.appendChild(fa);
+      
+      // طباعة المستند بعد تحميل الخطوط
+      setTimeout(() => {
+        window.print();
+        
+        // إعادة المحتوى الأصلي بعد الطباعة
+        document.body.innerHTML = originalContent;
+        document.title = originalTitle;
+        hideLoading();
+      }, 1000);
+    }
+
+    // ========== دالة تحميل PDF ==========
+    function downloadPDF() {
+      showLoading('جاري تحضير الملف للتحميل...');
+      
+      const element = document.getElementById("cv");
+      const opt = {
+        margin: 15,
+        filename: 'السيرة الذاتية - إبراهيم عبده محمد عيسى.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { 
+          scale: 2,
+          logging: false,
+          useCORS: true,
+          allowTaint: true,
+          scrollX: 0,
+          scrollY: 0
+        },
+        jsPDF: { 
+          unit: 'mm', 
+          format: 'a4', 
+          orientation: 'portrait',
+          compress: true
+        }
+      };
+      
+      setTimeout(() => {
+        html2pdf().set(opt).from(element).save().then(() => {
+          hideLoading();
+        }).catch(err => {
+          hideLoading();
+          alert('حدث خطأ أثناء إنشاء PDF: ' + err.message);
+        });
+      }, 500);
+    }
+
+    // ========== دالة المشاركة ==========
+    function shareCV() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'السيرة الذاتية - إبراهيم عبده محمد عيسى',
+          text: 'اطلع على سيرتي الذاتية المحدثة',
+          url: window.location.href,
+        }).catch((error) => {
+          console.log('حدث خطأ في المشاركة:', error);
+        });
+      } else {
+        alert('خاصية المشاركة غير متاحة في هذا المتصفح. يمكنك نسخ الرابط ومشاركته يدويًا.');
+      }
+    }
+
+    // ========== دوال مساعدة ==========
+    function showLoading(message) {
+      const overlay = document.getElementById('loadingOverlay');
+      const messageElement = document.getElementById('loadingMessage');
+      messageElement.textContent = message;
+      overlay.style.display = 'flex';
+    }
+
+    function hideLoading() {
+      document.getElementById('loadingOverlay').style.display = 'none';
+    }
+
+    // تأثيرات الظهور عند التمرير
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.querySelector('.card')) {
+            entry.target.querySelectorAll('.card').forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate__animated', 'animate__fadeInUp');
+              }, index * 200);
+            });
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.item').forEach(el => observer.observe(el));
+
+    // تأثيرات الشريط التقدمي عند الظهور
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach(bar => {
+      observer.observe(bar);
+    });
+
+    // تأثيرات عند تحميل الصفحة
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      
+      setTimeout(() => {
+        document.querySelector('.profile-pic').classList.add('animate__zoomIn');
+      }, 300);
+      
+      setTimeout(() => {
+        document.querySelector('.name').classList.add('animate__fadeInDown');
+      }, 600);
+      
+      setTimeout(() => {
+        document.querySelector('.job-title').classList.add('animate__fadeInUp');
+      }, 900);
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
